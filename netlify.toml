@@ -1,0 +1,30 @@
+# Configurações oficiais de publicação na Netlify
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+# Desativa o Netlify Drawer, widget de deploy preview e feedbacks colaborativos
+[build.environment]
+  NETLIFY_DISABLE_DRAWER = "true"
+
+[context.production.environment]
+  NETLIFY_DISABLE_DRAWER = "true"
+
+[context.deploy-preview.environment]
+  NETLIFY_DISABLE_DRAWER = "true"
+
+[context.branch-deploy.environment]
+  NETLIFY_DISABLE_DRAWER = "true"
+
+# Regras de redirecionamento para SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"

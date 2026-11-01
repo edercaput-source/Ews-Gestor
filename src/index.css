@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #0B5ED7;
+  --color-primary-light: #2E7DFF;
+  --color-primary-soft: #E6F0FF;
+  --color-graphite: #1F2937;
+  --color-gray: #6B7280;
+  --color-off-white: #F8FAFC;
+
+  /* Aliases funcionais */
+  --color-branco: #FFFFFF;
+  --color-borda-suave: #E2E8F0;
+  --color-translucido-primaria: rgba(11, 94, 215, 0.08);
+}
+
+@layer utilities {
+  /* Acabamento Ghost para Cards e Superfícies Claras na Nova Paleta */
+  .ghost-card {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    border: 1px solid rgba(11, 94, 215, 0.12);
+    box-shadow: 0 8px 28px rgba(31, 41, 55, 0.06);
+    border-radius: 16px;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .ghost-card:hover {
+    box-shadow: 0 12px 32px rgba(31, 41, 55, 0.09);
+    border-color: rgba(11, 94, 215, 0.26);
+  }
+
+  /* Painel Ghost com borda suave */
+  .ghost-panel {
+    background-color: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 8px 28px rgba(31, 41, 55, 0.05);
+  }
+
+  /* Barra de Navegação Superior com Fundo Branco Ghost */
+  .ghost-nav-light {
+    background-color: rgba(255, 255, 255, 0.90);
+    backdrop-filter: blur(16px) saturate(150%);
+    -webkit-backdrop-filter: blur(16px) saturate(150%);
+    border-bottom: 1px solid #E2E8F0;
+    box-shadow: 0 4px 24px -2px rgba(31, 41, 55, 0.05);
+  }
+
+  /* Painel Ghost Escuro para seções de contraste (Grafite #1F2937) */
+  .ghost-dark {
+    background-color: rgba(31, 41, 55, 0.70);
+    backdrop-filter: blur(14px) saturate(130%);
+    -webkit-backdrop-filter: blur(14px) saturate(130%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.10), 0 10px 28px -5px rgba(17, 24, 39, 0.35);
+    border-radius: 16px;
+  }
+
+  /* Chips Ghost flutuando sobre mockups */
+  .ghost-chip {
+    background-color: rgba(31, 41, 55, 0.76);
+    backdrop-filter: blur(12px) saturate(130%);
+    -webkit-backdrop-filter: blur(12px) saturate(130%);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 8px 22px -4px rgba(17, 24, 39, 0.35);
+    border-radius: 14px;
+  }
+
+  /* Balão Verde WhatsApp Oficial */
+  .ghost-whatsapp-btn {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    border: 2px solid rgba(255, 255, 255, 0.65);
+    box-shadow: 0 8px 24px -2px rgba(37, 211, 102, 0.45), 0 4px 12px rgba(18, 140, 126, 0.3);
+  }
+
+  .ghost-whatsapp-balloon {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(37, 211, 102, 0.25);
+    box-shadow: 0 12px 32px -4px rgba(31, 41, 55, 0.12), 0 4px 12px rgba(37, 211, 102, 0.15);
+  }
+}
+
+/* Fallback para navegadores sem suporte a backdrop-filter */
+@supports not (backdrop-filter: blur(1px)) {
+  .ghost-card {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+  }
+  .ghost-panel {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+  }
+  .ghost-nav-light {
+    background-color: #FFFFFF !important;
+    border-bottom: 1px solid #E2E8F0 !important;
+  }
+  .ghost-dark {
+    background-color: rgba(31, 41, 55, 0.95) !important;
+    border: 1px solid rgba(255, 255, 255, 0.20) !important;
+  }
+  .ghost-chip {
+    background-color: rgba(31, 41, 55, 0.95) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  }
+}
+
+/* Respeito à preferência de transparência reduzida */
+@media (prefers-reduced-transparency: reduce) {
+  .ghost-card,
+  .ghost-panel,
+  .ghost-nav-light {
+    background-color: #FFFFFF !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-color: #E2E8F0 !important;
+  }
+  .ghost-dark,
+  .ghost-chip {
+    background-color: #1F2937 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+  }
+}
+
+/* Respeito à preferência de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Foco visível acessível em toda a aplicação */
+:focus-visible {
+  outline: 2px solid #0B5ED7;
+  outline-offset: 3px;
+}
+
+/* Ocultar e eliminar completamente marca d'água / badge da Netlify */
+#netlify-badge-container, 
+.netlify-badge,
+[class*="netlify-badge" i],
+[id*="netlify-badge" i],
+[class*="netlify-drawer" i],
+[id*="netlify-drawer" i],
+#netlify-collaborative-deploy-preview,
+[id*="netlify-collaborative" i],
+netlify-drawer,
+netlify-badge,
+[data-netlify-drawer],
+div[class*="Netlify" i],
+div[id*="Netlify" i],
+iframe[src*="netlify" i],
+iframe[id*="netlify" i],
+iframe[class*="netlify" i],
+a[href*="netlify.com" i],
+a[href*="netlify.app" i],
+a[aria-label*="netlify" i],
+img[src*="netlify" i],
+svg[class*="netlify" i] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: fixed !important;
+  top: -99999px !important;
+  left: -99999px !important;
+  width: 0 !important;
+  height: 0 !important;
+  max-width: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  z-index: -999999 !important;
+  transform: scale(0) !important;
+}

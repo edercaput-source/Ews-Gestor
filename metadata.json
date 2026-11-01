@@ -1,0 +1,6 @@
+{
+  "name": "EWS Gestor - Sistemas e Gestão Empresarial",
+  "description": "Site institucional da EWS Gestor. Sistema ERP financeiro e operacional e Núcleo de Aceleração para transformar informações em decisões melhores.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

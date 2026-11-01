@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EWS Gestor | Sistema de Gestão ERP e Acompanhamento Empresarial</title>
+    <meta
+      name="description"
+      content="Sua empresa mais organizada. Sua gestão mais inteligente. Sistema de gestão ERP financeiro e operacional e acompanhamento empresarial pelo Núcleo de Aceleração."
+    />
+    <meta name="theme-color" content="#0B5ED7" />
+    <link rel="canonical" href="https://ewsgestor.com.br/" />
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ewsgestor.com.br/" />
+    <meta property="og:title" content="EWS Gestor | Sistema de Gestão ERP e Acompanhamento Empresarial" />
+    <meta
+      property="og:description"
+      content="Sua empresa mais organizada. Sua gestão mais inteligente. Tecnologia e acompanhamento empresarial para transformar informações em decisões melhores."
+    />
+    <meta property="og:image" content="https://ewsgestor.com.br/og-share.png" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="EWS Gestor | Sistema de Gestão ERP e Acompanhamento Empresarial" />
+    <meta
+      name="twitter:description"
+      content="Sua empresa mais organizada. Sua gestão mais inteligente. Tecnologia e acompanhamento empresarial para transformar informações em decisões melhores."
+    />
+    <meta name="twitter:image" content="https://ewsgestor.com.br/og-share.png" />
+
+    <!-- Structured Data (LocalBusiness) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "EWS Gestor",
+        "legalName": "EWS Gestor Sistemas e Gestão Empresarial",
+        "url": "https://ewsgestor.com.br",
+        "logo": "https://ewsgestor.com.br/assets/brand/icone-recortado.png",
+        "image": "https://ewsgestor.com.br/og-share.png",
+        "telephone": "+55 18 99146-9679",
+        "email": "contato@ewsgestor.com.br",
+        "description": "Sistema de gestão ERP financeiro e operacional e acompanhamento empresarial pelo Núcleo de Aceleração para transformar informações em decisões melhores."
+      }
+    </script>
+    <!-- Eliminação total da marca d'água / badge da Netlify -->
+    <style>
+      #netlify-badge-container, 
+      .netlify-badge,
+      [class*="netlify-badge" i],
+      [id*="netlify-badge" i],
+      [class*="netlify-drawer" i],
+      [id*="netlify-drawer" i],
+      #netlify-collaborative-deploy-preview,
+      [id*="netlify-collaborative" i],
+      netlify-drawer,
+      netlify-badge,
+      [data-netlify-drawer],
+      div[class*="Netlify" i],
+      div[id*="Netlify" i],
+      iframe[src*="netlify" i],
+      iframe[id*="netlify" i],
+      iframe[class*="netlify" i],
+      a[href*="netlify.com" i],
+      a[href*="netlify.app" i],
+      a[aria-label*="netlify" i],
+      img[src*="netlify" i],
+      svg[class*="netlify" i] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        position: fixed !important;
+        top: -99999px !important;
+        left: -99999px !important;
+        width: 0 !important;
+        height: 0 !important;
+        max-width: 0 !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        clip: rect(0, 0, 0, 0) !important;
+        clip-path: inset(50%) !important;
+        z-index: -999999 !important;
+        transform: scale(0) !important;
+      }
+    </style>
+    <script>
+      (function() {
+        function removeNetlifyBadge() {
+          var selectors = [
+            '#netlify-badge-container',
+            '.netlify-badge',
+            '[class*="netlify-badge" i]',
+            '[id*="netlify-badge" i]',
+            '[class*="netlify-drawer" i]',
+            '[id*="netlify-drawer" i]',
+            '#netlify-collaborative-deploy-preview',
+            '[id*="netlify-collaborative" i]',
+            'netlify-drawer',
+            'netlify-badge',
+            '[data-netlify-drawer]',
+            'iframe[src*="netlify" i]',
+            'iframe[id*="netlify" i]',
+            'iframe[class*="netlify" i]',
+            'a[href*="netlify.com" i]',
+            'a[href*="netlify.app" i]',
+            'a[aria-label*="netlify" i]',
+            'img[src*="netlify" i]'
+          ];
+
+          for (var s = 0; s < selectors.length; s++) {
+            var elements = document.querySelectorAll(selectors[s]);
+            for (var i = 0; i < elements.length; i++) {
+              var el = elements[i];
+              if (el && el.parentNode) {
+                el.style.setProperty('display', 'none', 'important');
+                el.style.setProperty('visibility', 'hidden', 'important');
+                el.style.setProperty('opacity', '0', 'important');
+                el.parentNode.removeChild(el);
+              }
+            }
+          }
+
+          // Busca genérica por links externos da Netlify adicionados na página
+          var allLinks = document.getElementsByTagName('a');
+          for (var j = allLinks.length - 1; j >= 0; j--) {
+            var a = allLinks[j];
+            var href = (a.getAttribute('href') || '').toLowerCase();
+            var text = (a.innerText || a.textContent || '').toLowerCase();
+            if (
+              href.indexOf('netlify.com') !== -1 ||
+              href.indexOf('netlify.app') !== -1 ||
+              text.indexOf('netlify') !== -1
+            ) {
+              a.style.setProperty('display', 'none', 'important');
+              if (a.parentNode) {
+                a.parentNode.removeChild(a);
+              }
+            }
+          }
+        }
+
+        // Execução síncrona imediata
+        removeNetlifyBadge();
+
+        // Observer que roda em tempo real interceptando qualquer injeção no DOM
+        if (typeof MutationObserver !== 'undefined') {
+          var obs = new MutationObserver(function() {
+            removeNetlifyBadge();
+          });
+          obs.observe(document.documentElement, {
+            childList: true,
+            subtree: true
+          });
+        }
+
+        // Intervalo de segurança durante os primeiros 10 segundos
+        var ticks = 0;
+        var timer = setInterval(function() {
+          removeNetlifyBadge();
+          ticks++;
+          if (ticks > 50) {
+            clearInterval(timer);
+          }
+        }, 200);
+
+        window.addEventListener('DOMContentLoaded', removeNetlifyBadge);
+        window.addEventListener('load', removeNetlifyBadge);
+      })();
+    </script>
+  </head>
+  <body class="bg-[#F8FAFC] text-[#1F2937] font-sans antialiased selection:bg-[#0B5ED7]/15 selection:text-[#0B5ED7]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
