@@ -1,6 +1,6 @@
 /**
  * Utilitários para formatação e geração de URLs de WhatsApp da EWS Gestor.
- * Segue estritamente as regras de comunicação sem promessas exageradas.
+ * Preserva o número, integração direta wa.me e mensagens claras.
  */
 
 export const EWS_PHONE_RAW = '5518991469679';
@@ -8,17 +8,18 @@ export const EWS_PHONE_FORMATTED = '+55 18 99146-9679';
 export const EWS_EMAIL = 'contato@ewsgestor.com.br';
 export const EWS_INSTAGRAM_HANDLE = '@ewsgestor';
 export const EWS_INSTAGRAM_URL = 'https://instagram.com/ewsgestor';
-export const EWS_DOMAIN = 'ewsgestor.com.br';
 
 export const WHATSAPP_MESSAGES = {
-  geral: 'Olá! Vim pelo site da EWS Gestor e gostaria de agendar uma apresentação.',
-  sistema: 'Olá! Vim pelo site da EWS Gestor e quero conhecer o sistema de gestão. Podemos agendar uma demonstração?',
-  nucleo: 'Olá! Vim pelo site da EWS Gestor e quero saber mais sobre o Núcleo de Aceleração.',
+  geral: 'Olá! Vim pelo site da EWS Gestor e gostaria de mais informações.',
+  solucoes: 'Olá! Vim pelo site da EWS Gestor e gostaria de conhecer as soluções digitais.',
+  gestao: 'Olá! Vim pelo site da EWS Gestor e quero conhecer as soluções de Sistemas e Gestão (ERP). Podemos conversar?',
+  software: 'Olá! Vim pelo site da EWS Gestor e tenho interesse na área de Software e Produtos Digitais.',
+  ia: 'Olá! Vim pelo site da EWS Gestor e gostaria de saber mais sobre as soluções com Inteligência Artificial.',
   flutuante: 'Olá! Vim pelo site da EWS Gestor e gostaria de tirar uma dúvida.',
   segmento: (segmento: string): string =>
-    `Olá! Vim pelo site da EWS Gestor. Tenho ${segmento} e gostaria de saber como a EWS pode ajudar minha empresa.`,
+    `Olá! Vim pelo site da EWS Gestor. Tenho ${segmento} e gostaria de saber como a EWS Gestor pode ajudar minha empresa.`,
   formulario: (nome: string, negocio: string, interesse: string): string =>
-    `Olá! Meu nome é ${nome.trim()}. Tenho ${negocio.trim()} e tenho interesse em ${interesse.trim()}. Vim pelo site da EWS Gestor e gostaria de agendar uma apresentação.`,
+    `Olá! Meu nome é ${nome.trim()}. Tenho ${negocio.trim()} e tenho interesse em ${interesse.trim()}. Vim pelo site da EWS Gestor e gostaria de agendar uma conversa.`,
 };
 
 /**
@@ -31,7 +32,7 @@ export function buildWhatsAppLink(message: string): string {
 }
 
 /**
- * Validação do mini-formulário de contato rápido da EWS Gestor.
+ * Validação do mini-formulário de contato da EWS Gestor.
  */
 export interface ContactFormData {
   nome: string;

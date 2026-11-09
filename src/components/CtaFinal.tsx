@@ -58,7 +58,7 @@ export const CtaFinal: React.FC = () => {
   };
 
   return (
-    <section id="contato" className="py-20 sm:py-28 bg-gradient-to-br from-[#0B5ED7] via-[#0B5ED7] to-[#2E7DFF] text-white relative overflow-hidden">
+    <section id="contato" className="py-16 sm:py-24 bg-gradient-to-br from-[#0B5ED7] via-[#0B5ED7] to-[#2E7DFF] text-white relative overflow-hidden">
       {/* Grid sutil decorativo em marca d'água */}
       <div
         className="absolute inset-0 opacity-5 pointer-events-none"
@@ -69,18 +69,18 @@ export const CtaFinal: React.FC = () => {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Coluna da Esquerda: Textos de Conversão */}
-          <div className="lg:col-span-6 space-y-6">
+          <div className="lg:col-span-6 space-y-5">
             <span className="inline-block px-3 py-1 rounded-full bg-white/15 text-xs font-bold uppercase tracking-widest text-white border border-white/20 backdrop-blur-xs">
               Fale com a EWS Gestor
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
-              Sua empresa está pronta para{' '}
-              <span className="text-white underline decoration-white/40 underline-offset-8">evoluir na gestão?</span>
+              Pronto para impulsionar a{' '}
+              <span className="text-white underline decoration-white/40 underline-offset-8">tecnologia da sua empresa?</span>
             </h2>
             <p className="text-base sm:text-lg text-white/90 leading-relaxed font-normal">
-              Conheça as soluções da EWS Gestor e descubra como podemos ajudar sua empresa a ter mais organização, controle e clareza nas decisões.
+              Conheça as soluções da EWS Gestor e descubra como podemos ajudar seu negócio com sistemas de gestão, produtos digitais e inteligência artificial.
             </p>
 
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
@@ -90,24 +90,24 @@ export const CtaFinal: React.FC = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-[#0B5ED7] bg-white hover:bg-[#F8FAFC] transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
               >
-                <span>Agendar apresentação direta</span>
+                <span>Falar pelo WhatsApp</span>
                 <ArrowUpRight className="w-4 h-4" />
               </a>
 
               <a
                 href={`mailto:${SITE_CONFIG.email}`}
                 className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/30 transition-colors backdrop-blur-xs"
-                title="Enviar e-mail para contato@ewsgestor.com.br"
+                title={`Enviar e-mail para ${SITE_CONFIG.email}`}
               >
                 <Mail className="w-4 h-4 text-white shrink-0" aria-hidden="true" />
                 <span>{SITE_CONFIG.email}</span>
               </a>
             </div>
 
-            <div className="pt-6 border-t border-white/20 flex flex-col sm:flex-row gap-4 text-xs text-white/85">
+            <div className="pt-5 border-t border-white/20 flex flex-col sm:flex-row gap-4 text-xs text-white/85">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-white" />
-                <span>Atendimento direto e personalizado</span>
+                <span>Atendimento direto com especialistas</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-white" />
@@ -118,14 +118,14 @@ export const CtaFinal: React.FC = () => {
 
           {/* Coluna da Direita: Mini-Formulário em Card com Acabamento Ghost */}
           <div className="lg:col-span-6">
-            <div className="bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-9 border border-white/30 shadow-[0_16px_36px_rgba(15,23,42,0.14)] text-[#1F2937]">
-              <div className="flex items-center gap-2.5 mb-6">
+            <div className="bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-white/30 shadow-[0_16px_36px_rgba(15,23,42,0.14)] text-[#1F2937]">
+              <div className="flex items-center gap-2.5 mb-5">
                 <div className="w-10 h-10 rounded-xl bg-[#E6F0FF] text-[#0B5ED7] flex items-center justify-center border border-[#0B5ED7]/20">
                   <MessageSquare className="w-5 h-5" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-[#1F2937]">
-                    Agende sua apresentação
+                    Inicie uma conversa
                   </h3>
                   <p className="text-xs text-[#6B7280]">
                     Preencha e converse com a gente no WhatsApp em 1 clique
@@ -134,7 +134,7 @@ export const CtaFinal: React.FC = () => {
               </div>
 
               {isSubmitted && (
-                <div className="mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-800 flex items-center gap-2">
+                <div className="mb-5 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-800 flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                   <span>
                     WhatsApp aberto com seus dados preenchidos! Se não abriu automaticamente, clique no botão novamente.
@@ -142,7 +142,7 @@ export const CtaFinal: React.FC = () => {
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} noValidate className="space-y-4.5">
+              <form onSubmit={handleSubmit} noValidate className="space-y-4">
                 {/* Campo Nome */}
                 <div>
                   <label
@@ -199,14 +199,17 @@ export const CtaFinal: React.FC = () => {
                     <option value="Automotivo (Oficina Mecânica / Autopeças)">
                       Automotivo (Oficina Mecânica, Autopeças)
                     </option>
-                    <option value="Comércio (Loja / Varejo / Mercado)">
-                      Comércio (Loja, Varejo, Mercado)
+                    <option value="Comércio & Varejo (Loja / Mercado)">
+                      Comércio & Varejo (Loja, Mercado)
                     </option>
-                    <option value="Distribuição (Distribuidora)">
-                      Distribuição (Distribuidora)
+                    <option value="Distribuição & Atacado">
+                      Distribuição & Atacado
                     </option>
                     <option value="Prestação de Serviços / MEI">
                       Prestação de Serviços / MEI
+                    </option>
+                    <option value="Empresa em Expansão">
+                      Empresa em Expansão
                     </option>
                     <option value="Outro segmento">Outro segmento</option>
                   </select>
@@ -217,13 +220,13 @@ export const CtaFinal: React.FC = () => {
                   )}
                 </div>
 
-                {/* Campo Solução de Interesse */}
+                {/* Campo Solução de Interesse (3 Frentes da EWS) */}
                 <div>
                   <label
                     htmlFor="contato-interesse"
                     className="block text-xs font-bold uppercase tracking-wider text-[#1F2937] mb-1.5"
                   >
-                    Interesse principal *
+                    Solução de interesse *
                   </label>
                   <select
                     id="contato-interesse"
@@ -237,11 +240,15 @@ export const CtaFinal: React.FC = () => {
                     aria-invalid={!!errors.interesse}
                     aria-describedby={errors.interesse ? 'interesse-error' : undefined}
                   >
-                    <option value="">Selecione a solução que procura</option>
-                    <option value="Sistema de Gestão (ERP)">Sistema de Gestão (ERP)</option>
-                    <option value="Núcleo de Aceleração">Núcleo de Aceleração</option>
-                    <option value="Os dois (Sistema e Acompanhamento)">
-                      Os dois (Sistema e Acompanhamento)
+                    <option value="">Selecione a frente que procura</option>
+                    <option value="Sistemas e Gestão (ERP)">Sistemas e Gestão (ERP)</option>
+                    <option value="Software e Produtos Digitais">Software e Produtos Digitais</option>
+                    <option value="Inteligência Artificial">Inteligência Artificial</option>
+                    <option value="Mais de uma frente tecnológica">
+                      Mais de uma frente tecnológica
+                    </option>
+                    <option value="Outra necessidade tecnológica">
+                      Outra necessidade tecnológica
                     </option>
                   </select>
                   {errors.interesse && (

@@ -31,7 +31,7 @@ export const FloatingWhatsApp: React.FC = () => {
             </button>
           </div>
           <p className="mt-2 text-xs text-[#1F2937]/85 leading-relaxed">
-            Olá! Converse conosco diretamente pelo WhatsApp para tirar dúvidas sobre o sistema ou agendar uma apresentação.
+            Olá! Converse conosco diretamente pelo WhatsApp para tirar dúvidas sobre as soluções da EWS Gestor.
           </p>
           <div className="mt-2.5 pt-2 border-t border-[#E2E8F0] flex items-center justify-between text-[11px]">
             <span className="font-mono font-medium text-[#6B7280]">{EWS_PHONE_FORMATTED}</span>
@@ -54,7 +54,7 @@ export const FloatingWhatsApp: React.FC = () => {
         rel="noopener noreferrer"
         onMouseEnter={() => setShowTooltip(true)}
         className="ghost-whatsapp-btn p-3.5 sm:p-4 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-108 active:scale-95 focus:outline-none focus:ring-4 focus:ring-[#25D366]/40 cursor-pointer"
-        aria-label="Conversar pelo WhatsApp da EWS Gestor: tirar dúvidas ou agendar apresentação"
+        aria-label="Conversar pelo WhatsApp da EWS Gestor"
       >
         <span className="sr-only">Falar no WhatsApp da EWS Gestor</span>
         <MessageCircle className="w-7 h-7 text-white fill-white" aria-hidden="true" />

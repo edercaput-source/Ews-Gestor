@@ -1,6 +1,7 @@
 /**
  * Configuração centralizada do site da EWS Gestor.
- * Mantém todos os contatos, mensagens e regras de conteúdo estritamente alinhados ao briefing.
+ * Marca principal: EWS Gestor.
+ * Mantém todos os contatos e mensagens alinhados.
  */
 
 export interface SystemModule {
@@ -18,10 +19,14 @@ export interface SegmentItem {
   iconName: string;
 }
 
-export interface NucleoPillar {
-  number: string;
+export interface AreaAtuacao {
+  id: 'gestao' | 'software' | 'ia';
   title: string;
+  tagline: string;
+  badge: string;
   description: string;
+  highlights: string[];
+  ctaLabel: string;
 }
 
 export interface HowItWorksStep {
@@ -37,64 +42,102 @@ export interface FaqItem {
 
 export const SITE_CONFIG = {
   name: 'EWS Gestor',
-  domain: 'ewsgestor.com.br',
   phoneFormatted: '+55 18 99146-9679',
   phoneRaw: '5518991469679',
   email: 'contato@ewsgestor.com.br',
   instagramHandle: '@ewsgestor',
   instagramUrl: 'https://instagram.com/ewsgestor',
 
-  concept: 'Sua empresa mais organizada. Sua gestão mais inteligente.',
+  concept: 'Tecnologia, inovação e inteligência para impulsionar negócios.',
   subtitle:
-    'Tecnologia e acompanhamento empresarial para transformar informações em decisões melhores.',
+    'A EWS Gestor desenvolve, comercializa e disponibiliza soluções tecnológicas para empresas e empreendedores.',
 
   hero: {
-    badge: 'Sistemas e Gestão Empresarial',
-    title: 'Gestão empresarial que acompanha o crescimento da sua empresa.',
+    badge: 'EWS Gestor',
+    title: 'Tecnologia e soluções digitais para impulsionar o seu negócio.',
     subtitle:
-      'Sistema ERP financeiro e operacional e acompanhamento empresarial para negócios que querem mais organização, controle e clareza nas decisões.',
-    ctaSystem: 'Conhecer o sistema ERP',
-    ctaNucleo: 'Conhecer o Núcleo de Aceleração',
-    ctaSecondary: 'Agendar apresentação pelo WhatsApp',
+      'Soluções tecnológicas completas para empresas e negócios: sistemas de gestão empresarial, software e produtos digitais e aplicações com inteligência artificial.',
+    ctaPrimary: 'Conhecer as soluções',
+    ctaContact: 'Falar com um especialista',
+    ctaSecondary: 'Atendimento comercial via WhatsApp',
   },
 
-  segments: [
+  // 3 Grandes Frentes de Atuação
+  areas: [
     {
-      id: 'alimentacao',
-      name: 'Alimentação',
-      description: 'Restaurantes, bares, pizzarias e lanchonetes.',
-      whatsappSegmentLabel: 'negócio no segmento de alimentação (restaurante / bar / pizzaria / lanchonete)',
-      iconName: 'Utensils',
+      id: 'gestao',
+      badge: 'Frente 01',
+      title: 'Sistemas e Gestão',
+      tagline: 'Organização, controle e eficiência empresarial',
+      description:
+        'Soluções tecnológicas para controle financeiro, gestão operacional, estoque, compras, vendas e emissão fiscal. Ferramentas consolidadas para transformar informações em decisões ágeis.',
+      highlights: [
+        'Sistema ERP completo para pequenas e médias empresas',
+        'Controle financeiro, contas a pagar, receber e fluxo de caixa',
+        'Gestão de estoque, compras via XML, vendas e PDV ágil',
+        'Emissão de documentos fiscais (NF-e, NFC-e, NFS-e) e relatórios',
+      ],
+      ctaLabel: 'Ver detalhes do Sistema',
     },
     {
-      id: 'automotivo',
-      name: 'Automotivo',
-      description: 'Oficinas mecânicas e autopeças.',
-      whatsappSegmentLabel: 'negócio no segmento automotivo (oficina mecânica / autopeças)',
-      iconName: 'Wrench',
+      id: 'software',
+      badge: 'Frente 02',
+      title: 'Software e Produtos Digitais',
+      tagline: 'Desenvolvimento e plataformas personalizadas',
+      description:
+        'Criação, comercialização e disponibilização de aplicações web modernas, plataformas digitais e ferramentas sob medida para necessidades específicas de cada mercado.',
+      highlights: [
+        'Aplicações web modernas, escaláveis e responsivas',
+        'Sistemas personalizados e integração de processos de negócio',
+        'Plataformas digitais desenhadas para necessidades reais',
+        'Arquitetura segura, focada em usabilidade e performance',
+      ],
+      ctaLabel: 'Falar sobre projeto digital',
     },
     {
-      id: 'comercio',
-      name: 'Comércio',
-      description: 'Lojas, varejo e mercados.',
-      whatsappSegmentLabel: 'comércio (loja / varejo / mercado)',
-      iconName: 'Store',
+      id: 'ia',
+      badge: 'Frente 03',
+      title: 'Inteligência Artificial',
+      tagline: 'Soluções inteligentes para ampliar possibilidades',
+      description:
+        'Aplicação prática de inteligência artificial em assistentes digitais, ferramentas de produtividade e soluções analíticas para elevar a capacidade operacional de empresas.',
+      highlights: [
+        'Aplicações inteligentes integradas ao cotidiano empresarial',
+        'Assistentes digitais e atendimento inteligente',
+        'Ferramentas para ganho de produtividade e apoio à tomada de decisão',
+        'Tecnologias focadas em inteligência e visão de futuro',
+      ],
+      ctaLabel: 'Explorar soluções de IA',
     },
-    {
-      id: 'distribuicao',
-      name: 'Distribuição',
-      description: 'Distribuidoras e atacados.',
-      whatsappSegmentLabel: 'distribuidora',
-      iconName: 'Truck',
-    },
-    {
-      id: 'servicos',
-      name: 'Serviços & MEIs',
-      description: 'Prestadores de serviços e microempreendedores individuais.',
-      whatsappSegmentLabel: 'prestação de serviços / MEI',
-      iconName: 'Briefcase',
-    },
-  ] as SegmentItem[],
+  ] as AreaAtuacao[],
+
+  about: {
+    title: 'Uma empresa de tecnologia com visão de futuro',
+    subtitle:
+      'A EWS Gestor atua no desenvolvimento, na comercialização e na disponibilização de soluções digitais pensadas para apoiar empresas e empreendedores em sua jornada de evolução.',
+    pillars: [
+      {
+        title: 'Inovação e Tecnologia',
+        description:
+          'Utilizamos ferramentas e padrões modernos da tecnologia para entregar soluções confiáveis, estáveis e escaláveis.',
+      },
+      {
+        title: 'Inteligência e Organização',
+        description:
+          'Ajudamos negócios a substituir a improvisação por processos claros, informações centralizadas e decisões baseadas em dados.',
+      },
+      {
+        title: 'Confiabilidade e Parceria',
+        description:
+          'Construímos relacionamentos de longo prazo com atendimento humano, direto e compromisso genuíno com o sucesso dos nossos clientes.',
+      },
+      {
+        title: 'Capacidade Multidisciplinar',
+        description:
+          'Reunimos competências em gestão empresarial, desenvolvimento de software e soluções com inteligência artificial sob uma mesma marca institucional.',
+      },
+    ],
+  },
 
   managementChallenges: [
     {
@@ -118,6 +161,51 @@ export const SITE_CONFIG = {
       description: 'Comprar, precificar ou contratar no sentimento, sem histórico financeiro confiável.',
     },
   ],
+
+  segments: [
+    {
+      id: 'alimentacao',
+      name: 'Alimentação',
+      description: 'Restaurantes, bares, pizzarias e lanchonetes.',
+      whatsappSegmentLabel: 'negócio no segmento de alimentação (restaurante / bar / pizzaria / lanchonete)',
+      iconName: 'Utensils',
+    },
+    {
+      id: 'automotivo',
+      name: 'Automotivo',
+      description: 'Oficinas mecânicas e autopeças.',
+      whatsappSegmentLabel: 'negócio no segmento automotivo (oficina mecânica / autopeças)',
+      iconName: 'Wrench',
+    },
+    {
+      id: 'comercio',
+      name: 'Comércio & Varejo',
+      description: 'Lojas, comércios em geral e minimercados.',
+      whatsappSegmentLabel: 'comércio (loja / varejo / mercado)',
+      iconName: 'Store',
+    },
+    {
+      id: 'distribuicao',
+      name: 'Distribuição & Atacado',
+      description: 'Distribuidoras e empresas de fornecimento.',
+      whatsappSegmentLabel: 'distribuidora',
+      iconName: 'Truck',
+    },
+    {
+      id: 'servicos',
+      name: 'Serviços & MEIs',
+      description: 'Prestadores de serviços e microempreendedores.',
+      whatsappSegmentLabel: 'prestação de serviços / MEI',
+      iconName: 'Briefcase',
+    },
+    {
+      id: 'empresas',
+      name: 'Empresas em Expansão',
+      description: 'Negócios buscando modernização tecnológica e novas soluções digitais.',
+      whatsappSegmentLabel: 'empresa em busca de soluções digitais',
+      iconName: 'Building',
+    },
+  ] as SegmentItem[],
 
   systemModules: [
     {
@@ -169,60 +257,30 @@ export const SITE_CONFIG = {
 
   systemPricingNote: 'Planos entre R$ 100 e R$ 120 por mês.',
 
-  nucleoPillars: [
-    {
-      number: '01',
-      title: 'Análise',
-      description: 'Leitura criteriosa dos dados do seu negócio para entender a situação real das contas e da rotina.',
-    },
-    {
-      number: '02',
-      title: 'Organização',
-      description: 'Estruturação de rotinas financeiras e de registros para que nenhuma informação importante se perca.',
-    },
-    {
-      number: '03',
-      title: 'Orientação',
-      description: 'Apoio consultivo para descomplicar relatórios e traduzir termos técnicos em decisões práticas.',
-    },
-    {
-      number: '04',
-      title: 'Acompanhamento',
-      description: 'Contato direto e próximo para esclarecer dúvidas e ajustar a rota gerencial.',
-    },
-    {
-      number: '05',
-      title: 'Evolução',
-      description: 'Construção contínua de maturidade empresarial com decisões embasadas em números consistentes.',
-    },
-  ] as NucleoPillar[],
-
-  nucleoInvestmentNote: 'Personalizado, conforme o escopo e a necessidade de cada empresa.',
-
   whyUs: [
     {
-      title: 'Tecnologia acessível',
-      description: 'Sistema completo, intuitivo e moderno, com investimento justo para a sua empresa.',
+      title: 'Tecnologia acessível e eficiente',
+      description: 'Soluções intuitivas, modernas e robustas, desenvolvidas na medida certa para a realidade de cada negócio.',
     },
     {
-      title: 'Adequado à sua realidade',
-      description: 'Criado na medida certa para MEIs, pequenos e médios negócios, sem funções desnecessárias.',
+      title: 'Três frentes de atuação tecnológica',
+      description: 'Desde a organização da rotina empresarial até produtos digitais personalizados e inteligência artificial.',
     },
     {
       title: 'Atendimento próximo e dedicado',
-      description: 'Contato direto e humanizado com especialistas prontos para apoiar no dia a dia da implantação.',
+      description: 'Contato direto com especialistas prontos para esclarecer dúvidas e acompanhar a evolução da sua empresa.',
     },
     {
       title: 'Implantação orientada',
-      description: 'A EWS Gestor cuida da configuração, do treinamento da sua equipe e da orientação inicial.',
+      description: 'Auxiliamos na configuração inicial e no treinamento da equipe para uso seguro e produtivo das ferramentas.',
     },
     {
-      title: 'Acompanhamento personalizado',
-      description: 'Você nunca fica sozinho diante de relatórios ou dúvidas gerenciais da sua empresa.',
+      title: 'Soluções modulares e sob medida',
+      description: 'Sua empresa contrata exatamente o que precisa, com liberdade para expandir conforme o negócio cresce.',
     },
     {
-      title: 'Foco em clareza gerencial',
-      description: 'Transformamos controles confusos em rotinas organizadas e números confiáveis para decidir.',
+      title: 'Compromisso com inovação real',
+      description: 'Foco em ferramentas práticas que geram valor direto, organização e visão de futuro para empreendedores.',
     },
   ],
 
@@ -230,50 +288,55 @@ export const SITE_CONFIG = {
     {
       step: '01',
       title: 'Conversa inicial',
-      description: 'Entendemos o seu momento, o tipo de negócio e onde estão as maiores dificuldades de controle.',
+      description: 'Entendemos o seu momento, o seu negócio e a demanda tecnológica necessária.',
     },
     {
       step: '02',
       title: 'Apresentação da solução',
-      description: 'Mostramos como o sistema ERP ou o Núcleo de Aceleração se encaixam na rotina da sua empresa.',
+      description: 'Demonstramos como as soluções da EWS atendem com precisão aos objetivos da sua empresa.',
     },
     {
       step: '03',
-      title: 'Proposta personalizada',
-      description: 'Definição transparente do escopo e do investimento sob medida, sem custos ocultos.',
+      title: 'Proposta transparente',
+      description: 'Definição clara do escopo, cronograma e investimento sob medida, sem custos ocultos.',
     },
     {
       step: '04',
-      title: 'Implantação e início',
-      description: 'Configuração do sistema, treinamento prático inicial e acompanhamento dedicado.',
+      title: 'Início e acompanhamento',
+      description: 'Disponibilização, configuração inicial e suporte contínuo para você e sua equipe.',
     },
   ] as HowItWorksStep[],
 
   faq: [
     {
-      question: 'Preciso contratar o sistema e o Núcleo juntos?',
+      question: 'O que é a EWS Gestor?',
       answer:
-        'Não. Cada solução pode ser contratada separadamente, conforme a necessidade atual da sua empresa. Você pode começar apenas com o Sistema de Gestão ou buscar acompanhamento pelo Núcleo de Aceleração.',
+        'A EWS Gestor é uma empresa de tecnologia que desenvolve, comercializa e disponibiliza soluções digitais para empresas e negócios em três frentes: Sistemas e Gestão, Software e Produtos Digitais, e Inteligência Artificial.',
     },
     {
-      question: 'O sistema serve para MEI e negócio pequeno?',
+      question: 'Como funciona o Sistema de Gestão (ERP)?',
       answer:
-        'Sim, foi pensado exatamente para MEIs, pequenos e médios negócios que precisam organizar fluxo de caixa, estoque, vendas e emitir notas sem complicações.',
+        'É uma solução tecnológica para organização, controle financeiro, estoque, compras, vendas, fiscal (NF-e, NFC-e, NFS-e) e relatórios. Oferecemos implantação, treinamento e orientação inicial para que a equipe utilize todas as rotinas com facilidade.',
     },
     {
-      question: 'Como funciona a implantação?',
+      question: 'A EWS Gestor desenvolve software e plataformas sob medida?',
       answer:
-        'A EWS Gestor faz a implantação, treinamento e orientação inicial, acompanhando os primeiros passos para que sua equipe use o sistema com segurança.',
+        'Sim. Na frente de Software e Produtos Digitais, desenvolvemos aplicações web, sistemas personalizados e plataformas pensadas para necessidades específicas de mercado.',
     },
     {
-      question: 'Quanto custa o Núcleo de Aceleração?',
+      question: 'Como a EWS Gestor atua com Inteligência Artificial?',
       answer:
-        'O valor é personalizado, conforme o escopo e a necessidade de cada empresa. Realizamos uma conversa inicial para entender suas prioridades e apresentar uma proposta sob medida.',
+        'Desenvolvemos e disponibilizamos aplicações com inteligência artificial, assistentes digitais e ferramentas de produtividade para ampliar as possibilidades e a inteligência operacional das empresas.',
     },
     {
-      question: 'Como funcionam teste grátis, fidelidade, taxa de implantação e cancelamento?',
+      question: 'As soluções são contratadas juntas ou separadas?',
       answer:
-        'Fale com a gente pelo WhatsApp e explicamos as condições detalhadas de acordo com o plano e modelo de atendimento escolhido.',
+        'Totalmente independentes. Cada cliente contrata apenas as soluções ou frentes que fazem sentido para o momento e a necessidade atual do seu negócio.',
+    },
+    {
+      question: 'Como agendar uma demonstração ou conversar sobre um projeto?',
+      answer:
+        'Basta entrar em contato pelo nosso WhatsApp oficial (+55 18 99146-9679) ou pelo formulário do site. Nossa equipe conversará diretamente com você para entender a demanda.',
     },
   ] as FaqItem[],
 

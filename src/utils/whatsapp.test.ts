@@ -24,10 +24,10 @@ test('buildWhatsAppLink formats segmento message correctly', () => {
 });
 
 test('buildWhatsAppLink formats formulario message correctly', () => {
-  const msg = WHATSAPP_MESSAGES.formulario('Carlos Silva', 'Restaurante', 'Sistema de Gestão');
+  const msg = WHATSAPP_MESSAGES.formulario('Carlos Silva', 'Restaurante', 'Sistemas e Gestão');
   assert.equal(
     msg,
-    'Olá! Meu nome é Carlos Silva. Tenho Restaurante e tenho interesse em Sistema de Gestão. Vim pelo site da EWS Gestor e gostaria de agendar uma apresentação.'
+    'Olá! Meu nome é Carlos Silva. Tenho Restaurante e tenho interesse em Sistemas e Gestão. Vim pelo site da EWS Gestor e gostaria de agendar uma conversa.'
   );
 });
 
@@ -48,7 +48,7 @@ test('validateContactForm passes valid inputs', () => {
   const validResult = validateContactForm({
     nome: 'Carlos',
     negocio: 'Comércio',
-    interesse: 'Os dois',
+    interesse: 'Sistemas e Gestão',
   });
 
   assert.equal(validResult.isValid, true);

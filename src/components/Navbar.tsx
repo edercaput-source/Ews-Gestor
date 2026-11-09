@@ -18,10 +18,10 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { label: 'Início', href: '#inicio' },
-    { label: 'Para quem', href: '#para-quem' },
-    { label: 'Sistema', href: '#sistema' },
-    { label: 'Núcleo de Aceleração', href: '#nucleo' },
-    { label: 'Por que a EWS', href: '#por-que' },
+    { label: 'Soluções', href: '#solucoes' },
+    { label: 'Sistemas e Gestão', href: '#sistema' },
+    { label: 'Sobre a EWS', href: '#sobre' },
+    { label: 'Diferenciais', href: '#por-que' },
     { label: 'Contato', href: '#contato' },
   ];
 
@@ -45,8 +45,8 @@ export const Navbar: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-200 ${
           isScrolled
-            ? 'ghost-nav-light py-3'
-            : 'bg-white/95 backdrop-blur-md py-3.5 border-b border-[#E2E8F0] shadow-xs'
+            ? 'ghost-nav-light py-2.5 sm:py-3'
+            : 'bg-white/95 backdrop-blur-md py-3 sm:py-3.5 border-b border-[#E2E8F0] shadow-xs'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,14 +59,14 @@ export const Navbar: React.FC = () => {
             >
               <img
                 src={SITE_CONFIG.assets.logoLight}
-                alt="Logotipo EWS Gestor - Sistemas e Gestão Empresarial"
-                className="h-10 sm:h-11 w-auto object-contain"
+                alt="Logotipo EWS Gestor"
+                className="h-9 sm:h-11 w-auto object-contain"
                 loading="eager"
               />
             </a>
 
             {/* Links de navegação desktop com hover suave e texto grafite */}
-            <nav className="hidden lg:flex items-center gap-1.5" aria-label="Navegação Principal">
+            <nav className="hidden lg:flex items-center gap-1" aria-label="Navegação Principal">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -86,7 +86,7 @@ export const Navbar: React.FC = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-[#0B5ED7] hover:bg-[#2E7DFF] transition-all duration-200 shadow-xs hover:shadow-md hover:-translate-y-0.5 active:translate-y-0"
               >
-                <span>Agendar apresentação</span>
+                <span>Falar com especialista</span>
                 <ArrowUpRight className="w-4 h-4 text-white" aria-hidden="true" />
               </a>
             </div>
@@ -128,7 +128,7 @@ export const Navbar: React.FC = () => {
                   onClick={handleLinkClick}
                   className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-bold uppercase tracking-wider text-white bg-[#0B5ED7] hover:bg-[#2E7DFF] transition-all duration-200 shadow-xs"
                 >
-                  <span>Agendar apresentação</span>
+                  <span>Falar com especialista</span>
                   <ArrowUpRight className="w-4 h-4 text-white" aria-hidden="true" />
                 </a>
               </div>

@@ -19,9 +19,9 @@ export const DesafioGestao: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 sm:py-28 bg-[#F8FAFC] border-t border-[#E2E8F0]">
+    <section className="py-16 sm:py-24 bg-[#F8FAFC] border-t border-[#E2E8F0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center mb-14 sm:mb-18">
+        <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
           <span className="text-xs font-bold uppercase tracking-widest text-[#0B5ED7]">
             Diagnóstico de rotina
           </span>
@@ -38,7 +38,7 @@ export const DesafioGestao: React.FC = () => {
           {SITE_CONFIG.managementChallenges.map((challenge, index) => (
             <div
               key={index}
-              className="ghost-card p-6 sm:p-7 flex flex-col justify-between hover:-translate-y-1"
+              className="ghost-card p-6 sm:p-7 flex flex-col justify-between hover:-translate-y-1 transition-all"
             >
               <div>
                 <div className="w-11 h-11 rounded-xl bg-[#E6F0FF] border border-[#0B5ED7]/15 flex items-center justify-center mb-4">
@@ -61,13 +61,13 @@ export const DesafioGestao: React.FC = () => {
           <div className="bg-[#1F2937] text-white rounded-2xl p-6 sm:p-7 shadow-md flex flex-col justify-between border border-white/10 hover:-translate-y-1 transition-all duration-200">
             <div>
               <span className="inline-block px-3 py-1 rounded-full bg-[#0B5ED7] text-xs font-semibold uppercase tracking-wider mb-4 text-white">
-                Próximo passo
+                Solução tecnológica
               </span>
               <h3 className="text-xl font-bold tracking-tight text-white leading-snug">
-                Organizar a empresa é o primeiro passo para decidir melhor.
+                Organizar a empresa é o primeiro passo para crescer com segurança.
               </h3>
               <p className="mt-3 text-sm text-neutral-300 leading-relaxed">
-                Ter clareza dos números elimina suposições e dá segurança para planejar compras, investimentos e crescimento.
+                Centralizar informações elimina retrabalho e dá previsibilidade para planejar compras, investimentos e expansão.
               </p>
             </div>
             <div className="mt-6 pt-4 border-t border-white/10">
@@ -75,7 +75,7 @@ export const DesafioGestao: React.FC = () => {
                 href="#sistema"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-[#2E7DFF] transition-colors"
               >
-                <span>Ver como o sistema organiza sua rotina</span>
+                <span>Conhecer a solução de gestão</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>

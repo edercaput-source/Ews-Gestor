@@ -21,7 +21,7 @@ export const SistemaGestao: React.FC = () => {
   const [activeScreenTab, setActiveScreenTab] = useState<'dashboard' | 'caixa' | 'ordens'>('dashboard');
   const [isZoomOpen, setIsZoomOpen] = useState(false);
 
-  const whatsappSistema = buildWhatsAppLink(WHATSAPP_MESSAGES.sistema);
+  const whatsappSistema = buildWhatsAppLink(WHATSAPP_MESSAGES.gestao);
 
   const moduleIcons: Record<string, React.ReactNode> = {
     produtos: <Tag className="w-5 h-5 text-[#0B5ED7]" />,
@@ -40,45 +40,45 @@ export const SistemaGestao: React.FC = () => {
       title: 'Visão Geral e Indicadores Financeiros',
       description: 'Acompanhe recebimentos, pagamentos do dia, faturamento e atalhos rápidos das rotinas fiscais e comerciais.',
       src: SITE_CONFIG.assets.screens.dashboard,
-      alt: 'Tela real do Dashboard de Gestão Financeira EWS Gestor com resumo financeiro e atalhos rápidos',
+      alt: 'Dashboard de Gestão Financeira da plataforma EWS Gestor',
     },
     caixa: {
       title: 'Movimento do Caixa e Controle Diário',
       description: 'Lançamentos de receitas, despesas, conciliação e saldo atualizado em tempo real.',
       src: SITE_CONFIG.assets.screens.caixa,
-      alt: 'Tela real de Movimento do Caixa na plataforma EWS Gestor',
+      alt: 'Painel de Movimento do Caixa na plataforma EWS Gestor',
     },
     ordens: {
       title: 'Ordens de Serviço e Gestão Operacional',
       description: 'Controle de OS faturadas, pendentes, técnicos responsáveis e acompanhamento de chamados.',
       src: SITE_CONFIG.assets.screens.ordens,
-      alt: 'Tela real de Gestão Operacional e Ordens de Serviço da EWS Gestor',
+      alt: 'Gestão Operacional e Ordens de Serviço da EWS Gestor',
     },
   };
 
   return (
-    <section id="sistema" className="py-20 sm:py-28 bg-[#F8FAFC] border-t border-[#E2E8F0]">
+    <section id="sistema" className="py-16 sm:py-24 bg-[#F8FAFC] border-t border-[#E2E8F0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Cabeçalho da Seção */}
-        <div className="max-w-3xl mx-auto text-center mb-14 sm:mb-18">
+        <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E6F0FF] text-[#0B5ED7] text-xs font-bold uppercase tracking-wider mb-3 border border-[#0B5ED7]/20">
             <Layers className="w-3.5 h-3.5" />
-            <span>Solução 01 • ERP</span>
+            <span>Frente 01 • Sistemas e Gestão</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1F2937] tracking-tight">
-            Sua gestão em um só lugar.
+            Sistemas e Gestão Empresarial
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#6B7280] leading-relaxed">
-            Sistema de gestão financeira e operacional para MEIs, pequenos e médios negócios, com implantação, treinamento e orientação inicial feitos pela EWS Gestor.
+            Solução tecnológica estruturada para organização, controle e eficiência dos negócios. ERP completo com implantação orientada, treinamento e suporte direto da equipe EWS Gestor.
           </p>
         </div>
 
         {/* Showcase de Telas Reais do Sistema com Acabamento Ghost */}
-        <div className="mb-18 ghost-panel rounded-2xl p-4 sm:p-7">
+        <div className="mb-14 sm:mb-16 ghost-panel rounded-2xl p-4 sm:p-7">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-[#E2E8F0]">
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-[#0B5ED7]">
-                Telas reais da plataforma
+                Telas da solução de gestão
               </span>
               <h3 className="text-lg sm:text-xl font-bold text-[#1F2937]">
                 {screensInfo[activeScreenTab].title}
@@ -186,10 +186,10 @@ export const SistemaGestao: React.FC = () => {
         <div className="mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div>
             <h3 className="text-xl sm:text-2xl font-bold text-[#1F2937] tracking-tight">
-              Módulos do Sistema de Gestão
+              Módulos Disponíveis
             </h3>
             <p className="mt-1 text-sm text-[#6B7280]">
-              Todas as ferramentas essenciais integradas para simplificar o seu cotidiano empresarial.
+              Ferramentas consolidadas para controle e padronização da rotina operacional e financeira.
             </p>
           </div>
 
@@ -205,7 +205,7 @@ export const SistemaGestao: React.FC = () => {
           {SITE_CONFIG.systemModules.map((mod) => (
             <div
               key={mod.id}
-              className="ghost-card p-5 sm:p-6 flex flex-col justify-between hover:-translate-y-1"
+              className="ghost-card p-5 sm:p-6 flex flex-col justify-between hover:-translate-y-1 transition-all"
             >
               <div>
                 <div className="w-10 h-10 rounded-xl bg-[#E6F0FF] border border-[#0B5ED7]/20 flex items-center justify-center mb-3.5">
@@ -230,11 +230,11 @@ export const SistemaGestao: React.FC = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-semibold text-white bg-[#0B5ED7] hover:bg-[#2E7DFF] transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
           >
-            <span>Conhecer o sistema</span>
+            <span>Solicitar demonstração do sistema</span>
             <ArrowRight className="w-4 h-4" />
           </a>
           <p className="mt-2.5 text-xs text-[#6B7280]">
-            Implantação, treinamento da equipe e orientação inicial com a EWS Gestor.
+            Atendimento direto com a equipe técnica da EWS Gestor.
           </p>
         </div>
       </div>

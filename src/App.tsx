@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { SolucoesVisaoGeral } from './components/SolucoesVisaoGeral';
 import { ParaQuem } from './components/ParaQuem';
 import { DesafioGestao } from './components/DesafioGestao';
 import { SistemaGestao } from './components/SistemaGestao';
-import { NucleoAceleracao } from './components/NucleoAceleracao';
-import { DuasSolucoes } from './components/DuasSolucoes';
+import { SoftwareProdutos } from './components/SoftwareProdutos';
+import { InteligenciaArtificial } from './components/InteligenciaArtificial';
+import { SobreEWS } from './components/SobreEWS';
 import { PorQueEWS } from './components/PorQueEWS';
 import { Faq } from './components/Faq';
 import { CtaFinal } from './components/CtaFinal';
@@ -56,37 +58,43 @@ export default function App() {
       {/* Menu Fixo com Efeito Vidro Claro */}
       <Navbar />
 
-      {/* Conteúdo Principal com Seções Âncora na Ordem Exata */}
+      {/* Conteúdo Principal com Seções Âncora Estruturadas */}
       <main id="main-content" className="flex-1">
-        {/* 1. Hero */}
+        {/* 1. Hero Institucional */}
         <Hero />
 
-        {/* 2. Para quem é */}
+        {/* 2. Visão Geral das Três Frentes Tecnológicas */}
+        <SolucoesVisaoGeral />
+
+        {/* 3. Segmentos Atendidos */}
         <ParaQuem />
 
-        {/* 3. O Desafio da Gestão */}
+        {/* 4. Diagnóstico e Desafio de Gestão */}
         <DesafioGestao />
 
-        {/* 4. Sistema de Gestão */}
+        {/* 5. Frente 01: Sistemas e Gestão (ERP com telas reais e módulos) */}
         <SistemaGestao />
 
-        {/* 5. Núcleo de Aceleração */}
-        <NucleoAceleracao />
+        {/* 6. Frente 02: Software e Produtos Digitais */}
+        <SoftwareProdutos />
 
-        {/* 6. Duas Soluções, Uma Gestão Mais Forte */}
-        <DuasSolucoes />
+        {/* 7. Frente 03: Inteligência Artificial (fundo escuro premium) */}
+        <InteligenciaArtificial />
 
-        {/* 7. Por que a EWS Gestor */}
+        {/* 8. Sobre a EWS: Propósito, História e Visão Tecnológica */}
+        <SobreEWS />
+
+        {/* 9. Por que a EWS & Jornada de Atendimento */}
         <PorQueEWS />
 
-        {/* 8. FAQ Curto */}
+        {/* 10. FAQ Institucional */}
         <Faq />
 
-        {/* 9. CTA Final com Mini-Formulário */}
+        {/* 11. CTA Final com Mini-Formulário e WhatsApp */}
         <CtaFinal />
       </main>
 
-      {/* 10. Rodapé Sólido Grafite */}
+      {/* 12. Rodapé Institucional EWS Soluções Tecnológicas */}
       <Footer />
 
       {/* Botão Flutuante de WhatsApp */}
